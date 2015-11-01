@@ -7,6 +7,7 @@ namespace OpenIDE.Core.Extensibility
     public class ItemTemplate
     {
         public string Name { get; set; }
+        public Guid ID { get; set; }
         public string Highlighting { get; set; }
         public Image Icon { get; set; }
         public Guid ProjectID { get; set; }
@@ -17,6 +18,7 @@ namespace OpenIDE.Core.Extensibility
         public ItemTemplate()
         {
             Name = "";
+            ID = Guid.Empty;
         }
     }
 }

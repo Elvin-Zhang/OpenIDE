@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>1444564202_common_bookmark_book_open.ico</ApplicationIcon>
+    <ApplicationIcon>OpenIDEIcon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DigitalRune.Windows.TextEditor">
@@ -69,22 +69,79 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dialogs\BetaKeyDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\BetaKeyDialog.Designer.cs">
+      <DependentUpon>BetaKeyDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\NewItemDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\NewItemDialog.Designer.cs">
+      <DependentUpon>NewItemDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\NewProjectDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\NewProjectDialog.Designer.cs">
+      <DependentUpon>NewProjectDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\OptionsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\OptionsDialog.Designer.cs">
+      <DependentUpon>OptionsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\PluginManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\PluginManager.Designer.cs">
+      <DependentUpon>PluginManager.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="OptionsPages\GeneralOptionsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RadAboutBox1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RadAboutBox1.Designer.cs">
+      <DependentUpon>RadAboutBox1.cs</DependentUpon>
+    </Compile>
     <Compile Include="SplashScreen.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SplashScreen.Designer.cs">
       <DependentUpon>SplashScreen.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Dialogs\BetaKeyDialog.resx">
+      <DependentUpon>BetaKeyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewItemDialog.resx">
+      <DependentUpon>NewItemDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewProjectDialog.resx">
+      <DependentUpon>NewProjectDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\OptionsDialog.resx">
+      <DependentUpon>OptionsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PluginManager.resx">
+      <DependentUpon>PluginManager.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionsPages\GeneralOptionsPage.resx">
+      <DependentUpon>GeneralOptionsPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -97,6 +154,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="RadAboutBox1.resx">
+      <DependentUpon>RadAboutBox1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SplashScreen.resx">
       <DependentUpon>SplashScreen.cs</DependentUpon>
     </EmbeddedResource>
@@ -121,7 +181,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="1444564202_common_bookmark_book_open.ico" />
+    <Content Include="OpenIDEIcon.ico" />
+    <None Include="Resources\1446383623_new10.png" />
+    <None Include="Resources\1446383469_settings.ico" />
+    <None Include="Resources\about_splash.png" />
     <None Include="Resources\splash.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

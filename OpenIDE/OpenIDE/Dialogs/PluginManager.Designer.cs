@@ -50,7 +50,7 @@
             this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl.Location = new System.Drawing.Point(0, 0);
             this.tabControl.Name = "tabControl";
-            this.tabControl.SelectedPage = this.onlinePluginsPage;
+            this.tabControl.SelectedPage = this.installedPluginsPage;
             this.tabControl.Size = new System.Drawing.Size(919, 494);
             this.tabControl.TabIndex = 0;
             this.tabControl.Text = "Installed Plugins";

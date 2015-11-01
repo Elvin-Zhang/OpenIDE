@@ -59,7 +59,7 @@ namespace OpenIDE.Core.Dialogs
 
             if (s != null)
             {
-                Type = s.ProjectID;
+                Type = s.ID;
                 Template = s;
                 if(!Filename.EndsWith(s.Extension))
                 {

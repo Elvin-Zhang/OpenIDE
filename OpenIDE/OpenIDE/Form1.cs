@@ -3,9 +3,9 @@ using OpenIDE.Core.Dialogs;
 using OpenIDE.Core.Extensibility;
 using OpenIDE.Core.ProjectSystem;
 using OpenIDE.Core.Views;
+using OpenIDE.Dialogs;
 using System;
 using System.IO;
-using System.Linq;
 using Telerik.WinControls;
 using Telerik.WinControls.UI;
 using Telerik.WinControls.UI.Docking;
@@ -20,6 +20,8 @@ namespace OpenIDE
 
             startpageDocument.Controls.Add(new StartPage() { Dock = System.Windows.Forms.DockStyle.Fill });
 
+            NotificationService.Init(radDesktopAlert1);
+
             ThemeResolutionService.ApplicationThemeName = "VisualStudio2012Dark";
 
             Workspace.Settings.Load();
@@ -28,6 +30,83 @@ namespace OpenIDE
             {
                 new BetaKeyDialog(this).ShowDialog();
                 Hide();
+            }
+
+            Workspace.Output = new Core.Contracts.Debug(outputTextBox);
+            Workspace.PluginManager.Load(Environment.CurrentDirectory + "\\Plugins");
+
+            // add here loading from startup
+            // file, project, solution
+
+            var args = Environment.GetCommandLineArgs();
+            if(args.Length > 0)
+            {
+                string file = null;
+
+#if DEBUG
+                file = args[1];
+#else
+                file = args[0];
+#endif
+
+                switch (Path.GetExtension(file))
+                {
+                    case ".sln":
+                        Workspace.Solution = Solution.Load(file);
+                        Workspace.SolutionPath = file;
+
+                        startpageDocument.Hide();
+                        solutionExplorerWindow.Show();
+
+                        newProjectMenuItem.Enabled = true;
+                        newFileMenuItem.Enabled = true;
+
+                        explorerTreeView.Nodes.Clear();
+                        explorerTreeView.Nodes.Add(SolutionExplorer.Build(Workspace.Solution));
+
+                        break;
+                    case "proj":
+
+                        break;
+                    default:
+                        var f = new Core.ProjectSystem.File();
+                        var shortF = Path.GetFileName(file);
+
+                        f.Name = shortF;
+                        f.Src = file;
+                        f.ID = Utils.GetTemplateID(shortF);
+
+                        explorerTreeView.Nodes.Clear();
+                        explorerTreeView.Nodes.Add(SolutionExplorer.Build(f));
+
+                        ItemTemplate np = null;
+                        Plugin npp = null;
+
+                        foreach (var item in Workspace.PluginManager.Plugins)
+                        {
+                            foreach (var it in item.ItemTemplates)
+                            {
+                                if(it.ID == f.ID)
+                                {
+                                    np = it;
+                                    npp = item;
+                                }
+                            }
+                        }
+
+                        var raw = System.IO.File.ReadAllBytes(file);
+
+                        npp.Events.Fire("OnCreateItem", f, raw);
+
+                        var doc = new DocumentWindow(f.Name);
+                        doc.Controls.Add(ViewSelector.Select(np, raw).GetView());
+
+                        dock.AddDocument(doc);
+
+                        startpageDocument.Hide();
+
+                        break;
+                }
             }
 
             RefreshLanguage();
@@ -203,7 +282,7 @@ namespace OpenIDE
                 {
                     foreach (var it in item.ItemTemplates)
                     {
-                        if(it.ProjectID == f.ID)
+                        if(it.ID == f.ID)
                         {
                             np = it;
                             nn = item;
@@ -211,7 +290,15 @@ namespace OpenIDE
                     }
                 }
 
-                var raw = System.IO.File.ReadAllBytes(new FileInfo(Workspace.SolutionPath).Directory.FullName + "\\" + f.Src);
+                byte[] raw = null;
+
+                if (Workspace.SelectedProject != null) { 
+                    raw = System.IO.File.ReadAllBytes(new FileInfo(Workspace.SolutionPath).Directory.FullName + "\\" + f.Src);
+                }
+                else
+                {
+                    raw = System.IO.File.ReadAllBytes(f.Src);
+                }
 
                 nn.Events.Fire("OnCreateItem", f, raw);
 
@@ -232,6 +319,28 @@ namespace OpenIDE
         {
             var dlg = new Pluginmanager();
             dlg.ShowDialog();
+        }
+
+        private void aboutMenuItem_Click(object sender, EventArgs e)
+        {
+            var n = new RadAboutBox1();
+            n.ShowDialog();
+        }
+
+        private void explorerTreeView_NodeExpandedChanged(object sender, RadTreeViewEventArgs e)
+        {
+            var proj = e.Node.Tag as Project;
+            if(proj != null)
+            {
+                proj.Expandet = e.Node.Expanded;
+                Workspace.Solution.Save(Workspace.SolutionPath);
+            }
+        }
+
+        private void optionsMenuItem_Click(object sender, EventArgs e)
+        {
+            var od = new OptionsDialog();
+            od.ShowDialog();
         }
     }
 }

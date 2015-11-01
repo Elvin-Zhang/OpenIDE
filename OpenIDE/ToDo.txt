@@ -1,7 +1,12 @@
-[ ] Splashscreen-image
+[-] open file without project
+[-] create folder for project
+[-] create properties folder
+[ ] create project system
+[-] open project without solution
+
 [ ] open selected file in new view, if its opened activate it
 [ ] add spliited view to use 2 views in 1
 	with resizing support
-[ ] add functions to scripting
-	- rgba(red, green, blue, alpha);
-	- hlsa (hue, saturation, light, alpha)
+[ ] add output window + errors window
+
+- must do now

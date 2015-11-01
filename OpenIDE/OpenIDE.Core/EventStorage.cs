@@ -24,28 +24,13 @@ namespace OpenIDE.Core
             }
         }
 
-        public void Fire(string name, object arg = null, object arg2 = null, object arg3 = null)
+        public void Fire(string name, params object[]args)
         {
             if (_listeners.ContainsKey(name))
             {
                 foreach (var l in _listeners[name])
                 {
-                    if (arg != null)
-                    {
-                        l(arg);
-                    }
-                    else if (arg2 != null)
-                    {
-                        l(arg, arg2);
-                    }
-                    else if (arg2 != null)
-                    {
-                        l(arg, arg2, arg3);
-                    }
-                    else
-                    {
-                        l();
-                    }
+                    l(args);
                 }
             }
         }

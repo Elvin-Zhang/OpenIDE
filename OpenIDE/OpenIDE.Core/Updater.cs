@@ -21,6 +21,8 @@ namespace OpenIDE.Core
             updController.retrieveHostVersion = true;
             updController.autoCloseHostApplication = true;
             updController.Language = Languages.English;
+
+            updController.autoCloseHostApplication = true;
         }
 
         public static void Update()

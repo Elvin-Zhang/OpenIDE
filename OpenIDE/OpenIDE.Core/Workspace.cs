@@ -1,4 +1,5 @@
 ﻿using DigitalRune.Windows.TextEditor;
+using OpenIDE.Core.Contracts;
 using OpenIDE.Core.ProjectSystem;
 using System;
 using Telerik.WinControls.UI.Docking;
@@ -33,6 +34,8 @@ namespace OpenIDE.Core
         public static RadDock dockingManager;
 
         public static Settings Settings = new Settings();
+
+        public static Debug Output { get; set; }
 
         static Workspace()
         {

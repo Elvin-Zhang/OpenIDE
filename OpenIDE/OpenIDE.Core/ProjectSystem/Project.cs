@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Windows.Markup;
 using System.Xaml;
 
@@ -10,6 +11,9 @@ namespace OpenIDE.Core.ProjectSystem
         public string Name { get; set; }
         public FileCollection Files { get; set; }
         public Guid Type { get; set; }
+
+        [DefaultValue(false)]
+        public bool Expandet { get; set; }
 
         public Project()
         {

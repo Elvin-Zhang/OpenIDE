@@ -11,11 +11,6 @@ Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "OpenIDE_Setup", "OpenIDE_Se
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenIDE.Core.Contracts", "OpenIDE.Core.Contracts\OpenIDE.Core.Contracts.csproj", "{E7CBE8BA-0BE4-45FE-AC01-56599F58A7BC}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{260B9F65-58CD-4E54-BB53-6D1232AD35B6}"
-	ProjectSection(SolutionItems) = preProject
-		ToDo.txt = ToDo.txt
-	EndProjectSection
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Library", "Library", "{69AD7D95-EE84-42D8-B52C-3F0F006D6473}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Std", "Std", "{24B35A54-BB40-47B8-BDB1-CA65E15D2EA3}"
@@ -27,6 +22,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Std", "Std", "{24B35A54-BB4
 		Library\Std\Event.ts = Library\Std\Event.ts
 		Library\Std\Exceptions.ts = Library\Std\Exceptions.ts
 		Library\Std\Iterator.ts = Library\Std\Iterator.ts
+		Lambda.js = Lambda.js
 		Library\Std\List.ts = Library\Std\List.ts
 		Library\Std\Module.ts = Library\Std\Module.ts
 		Library\Std\Range.ts = Library\Std\Range.ts
@@ -38,6 +34,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Std", "Std", "{24B35A54-BB4
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenIDE.Library", "OpenIDE.Library\OpenIDE.Library.csproj", "{8048D1BD-C332-4B60-A114-DA04CF131698}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PluginCompiler", "PluginCompiler\PluginCompiler.csproj", "{34CEFEB3-EB00-41AE-8789-D395CCF6F02A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +61,10 @@ Global
 		{8048D1BD-C332-4B60-A114-DA04CF131698}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8048D1BD-C332-4B60-A114-DA04CF131698}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8048D1BD-C332-4B60-A114-DA04CF131698}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34CEFEB3-EB00-41AE-8789-D395CCF6F02A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34CEFEB3-EB00-41AE-8789-D395CCF6F02A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34CEFEB3-EB00-41AE-8789-D395CCF6F02A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34CEFEB3-EB00-41AE-8789-D395CCF6F02A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

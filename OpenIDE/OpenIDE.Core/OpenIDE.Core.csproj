@@ -44,6 +44,7 @@
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Management" />
     <Reference Include="System.Numerics" />
@@ -86,30 +87,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Argument.cs" />
-    <Compile Include="Dialogs\BetaKeyDialog.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Dialogs\BetaKeyDialog.Designer.cs">
-      <DependentUpon>BetaKeyDialog.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Dialogs\NewProjectDialog.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Dialogs\NewProjectDialog.Designer.cs">
-      <DependentUpon>NewProjectDialog.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Dialogs\NewItemDialog.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Dialogs\NewItemDialog.Designer.cs">
-      <DependentUpon>NewItemDialog.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Dialogs\Pluginmanager.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Dialogs\Pluginmanager.Designer.cs">
-      <DependentUpon>Pluginmanager.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Arguments.cs" />
     <Compile Include="EditorBuilder.cs" />
     <Compile Include="EventStorage.cs" />
     <Compile Include="Extensibility\ItemTemplate.cs" />
@@ -123,6 +101,15 @@
     <Compile Include="FilterBuilder\SystemFileType.cs" />
     <Compile Include="Function.cs" />
     <Compile Include="FunctionCollection.cs" />
+    <Compile Include="IntellisensDefinition\Argument.cs" />
+    <Compile Include="IntellisensDefinition\Definition.cs" />
+    <Compile Include="IntellisensDefinition\DefinitionReader.cs" />
+    <Compile Include="IntellisensDefinition\Description.cs" />
+    <Compile Include="IntellisensDefinition\Example.cs" />
+    <Compile Include="IntellisensDefinition\IDefinitionItem.cs" />
+    <Compile Include="IntellisensDefinition\ItemCollection.cs" />
+    <Compile Include="IntellisensDefinition\Method.cs" />
+    <Compile Include="IntellisensDefinition\Object.cs" />
     <Compile Include="JSON\ArrayValue.cs" />
     <Compile Include="JSON\Framework\CharParsers.cs" />
     <Compile Include="JSON\Framework\JsonParserFromString.cs" />
@@ -140,21 +127,35 @@
     <Compile Include="Localisation\ICatalog.cs" />
     <Compile Include="Localisation\Loaders\MoFileParser.cs" />
     <Compile Include="Localisation\Plural\PluralFormProcessor.cs" />
-    <Compile Include="Options\PropertyControl.cs">
+    <Compile Include="NotificationService.cs" />
+    <Compile Include="Options\OptionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Options\OptionsForm.designer.cs">
+      <DependentUpon>OptionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Options\OptionsPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Options\OptionsPanel.Designer.cs">
+      <DependentUpon>OptionsPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Options\OptionsPanelList.cs" />
+    <Compile Include="ProjectOptions\PropertyControl.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Options\TabBrushes.cs" />
-    <Compile Include="Options\TabItem.cs">
+    <Compile Include="ProjectOptions\TabBrushes.cs" />
+    <Compile Include="ProjectOptions\TabItem.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Options\TabItemCollection.cs" />
-    <Compile Include="Options\TabPage.cs">
+    <Compile Include="ProjectOptions\TabItemCollection.cs" />
+    <Compile Include="ProjectOptions\TabPage.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Options\TabPageContainer.cs">
+    <Compile Include="ProjectOptions\TabPageContainer.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Options\TabStrip.cs">
+    <Compile Include="ProjectOptions\TabStrip.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="PluginCollection.cs" />
@@ -184,29 +185,25 @@
       <DependentUpon>StartPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Updater.cs" />
+    <Compile Include="Utils.cs" />
     <Compile Include="ViewSelector.cs" />
     <Compile Include="Views\EditorView.cs" />
     <Compile Include="Views\PropertiesView.cs" />
     <Compile Include="Views\SplittedView.cs" />
+    <Compile Include="WindowCollection.cs" />
     <Compile Include="Workspace.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Dialogs\BetaKeyDialog.resx">
-      <DependentUpon>BetaKeyDialog.cs</DependentUpon>
+    <EmbeddedResource Include="Options\OptionsForm.resx">
+      <DependentUpon>OptionsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Dialogs\NewProjectDialog.resx">
-      <DependentUpon>NewProjectDialog.cs</DependentUpon>
+    <EmbeddedResource Include="Options\OptionsPanel.resx">
+      <DependentUpon>OptionsPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Dialogs\NewItemDialog.resx">
-      <DependentUpon>NewItemDialog.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Dialogs\Pluginmanager.resx">
-      <DependentUpon>Pluginmanager.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Options\PropertyControl.resx">
+    <EmbeddedResource Include="ProjectOptions\PropertyControl.resx">
       <DependentUpon>PropertyControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />

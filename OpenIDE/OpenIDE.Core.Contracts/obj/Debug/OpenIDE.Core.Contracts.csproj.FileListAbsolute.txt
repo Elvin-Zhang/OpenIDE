@@ -2,8 +2,9 @@ C:\Users\filmee24\Documents\GitHub\OpenIDE\OpenIDE\OpenIDE.Core.Contracts\bin\De
 C:\Users\filmee24\Documents\GitHub\OpenIDE\OpenIDE\OpenIDE.Core.Contracts\bin\Debug\OpenIDE.Core.Contracts.pdb
 C:\Users\filmee24\Documents\GitHub\OpenIDE\OpenIDE\OpenIDE.Core.Contracts\obj\Debug\OpenIDE.Core.Contracts.dll
 C:\Users\filmee24\Documents\GitHub\OpenIDE\OpenIDE\OpenIDE.Core.Contracts\obj\Debug\OpenIDE.Core.Contracts.pdb
+C:\Users\filmee24\Documents\GitHub\OpenIDE\OpenIDE\OpenIDE.Core.Contracts\bin\Debug\Telerik.WinControls.UI.dll
+C:\Users\filmee24\Documents\GitHub\OpenIDE\OpenIDE\OpenIDE.Core.Contracts\obj\Debug\OpenIDE.Core.Contracts.dll.licenses
+C:\Users\filmee24\Documents\GitHub\OpenIDE\OpenIDE\OpenIDE.Core.Contracts\obj\Debug\OpenIDE.Core.Contracts.csprojResolveAssemblyReference.cache
 C:\Users\filmee24\Documents\GitHub\OpenIDE\OpenIDE\OpenIDE.Core.Contracts\bin\Debug\Telerik.WinControls.dll
 C:\Users\filmee24\Documents\GitHub\OpenIDE\OpenIDE\OpenIDE.Core.Contracts\bin\Debug\Telerik.WinControls.Themes.VisualStudio2012Dark.dll
-C:\Users\filmee24\Documents\GitHub\OpenIDE\OpenIDE\OpenIDE.Core.Contracts\bin\Debug\Telerik.WinControls.UI.dll
 C:\Users\filmee24\Documents\GitHub\OpenIDE\OpenIDE\OpenIDE.Core.Contracts\bin\Debug\TelerikCommon.dll
-C:\Users\filmee24\Documents\GitHub\OpenIDE\OpenIDE\OpenIDE.Core.Contracts\obj\Debug\OpenIDE.Core.Contracts.dll.licenses

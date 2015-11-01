@@ -28,11 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartPage));
             this.panel1 = new System.Windows.Forms.Panel();
             this.openProjectLink = new System.Windows.Forms.LinkLabel();
             this.newProjectLink = new System.Windows.Forms.LinkLabel();
             this.startLabel = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -41,6 +44,7 @@
             this.panel1.Controls.Add(this.openProjectLink);
             this.panel1.Controls.Add(this.newProjectLink);
             this.panel1.Controls.Add(this.startLabel);
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -50,7 +54,7 @@
             // openProjectLink
             // 
             this.openProjectLink.AutoSize = true;
-            this.openProjectLink.Location = new System.Drawing.Point(21, 166);
+            this.openProjectLink.Location = new System.Drawing.Point(17, 205);
             this.openProjectLink.Name = "openProjectLink";
             this.openProjectLink.Size = new System.Drawing.Size(69, 13);
             this.openProjectLink.TabIndex = 2;
@@ -60,7 +64,7 @@
             // newProjectLink
             // 
             this.newProjectLink.AutoSize = true;
-            this.newProjectLink.Location = new System.Drawing.Point(21, 137);
+            this.newProjectLink.Location = new System.Drawing.Point(18, 176);
             this.newProjectLink.Name = "newProjectLink";
             this.newProjectLink.Size = new System.Drawing.Size(65, 13);
             this.newProjectLink.TabIndex = 1;
@@ -73,11 +77,21 @@
             this.startLabel.BackColor = System.Drawing.SystemColors.Control;
             this.startLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.startLabel.ForeColor = System.Drawing.Color.Black;
-            this.startLabel.Location = new System.Drawing.Point(17, 100);
+            this.startLabel.Location = new System.Drawing.Point(17, 139);
             this.startLabel.Name = "startLabel";
             this.startLabel.Size = new System.Drawing.Size(46, 24);
             this.startLabel.TabIndex = 0;
             this.startLabel.Text = "Start";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(260, 121);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // StartPage
             // 
@@ -89,6 +103,7 @@
             this.Size = new System.Drawing.Size(891, 531);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -99,5 +114,6 @@
         private System.Windows.Forms.LinkLabel openProjectLink;
         private System.Windows.Forms.LinkLabel newProjectLink;
         private System.Windows.Forms.Label startLabel;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

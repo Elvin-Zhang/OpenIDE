@@ -58,9 +58,11 @@
   <ItemGroup>
     <Compile Include="Builders\ControlBuilder.cs" />
     <Compile Include="Builders\TextBoxBuilder.cs" />
+    <Compile Include="Debug.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="View.cs" />
     <Compile Include="ViewBuilder.cs" />
+    <Compile Include="Window.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\licenses.licx" />

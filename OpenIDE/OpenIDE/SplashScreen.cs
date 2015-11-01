@@ -27,7 +27,7 @@ namespace OpenIDE
         void tmr_Tick(object sender, EventArgs e)
         {
             Workspace.PluginManager = new PluginManager();
-            Workspace.PluginManager.Load(Environment.CurrentDirectory + "\\Plugins");
+            
             //after 3 sec stop the timer
             tmr.Stop();
             //display mainform

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenIDE\n"
 "POT-Creation-Date: 2015-10-25 14:14+0100\n"
-"PO-Revision-Date: 2015-10-25 14:14+0100\n"
+"PO-Revision-Date: 2015-10-31 12:55+0100\n"
 "Last-Translator: Chris Anders <info@furesoft.de>\n"
 "Language-Team: \n"
 "Language: en\n"
@@ -79,7 +79,7 @@ msgstr "Startpage"
 
 #: OpenIDE/Form1.cs:37
 msgid "SolutionExplorer"
-msgstr "SolutionExplorer"
+msgstr "Solution Explorer"
 
 #: OpenIDE/Form1.cs:38
 msgid "Toolbox"
