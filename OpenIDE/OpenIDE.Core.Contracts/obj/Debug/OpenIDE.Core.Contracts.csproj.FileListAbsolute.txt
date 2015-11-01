@@ -4,7 +4,12 @@ C:\Users\filmee24\Documents\GitHub\OpenIDE\OpenIDE\OpenIDE.Core.Contracts\obj\De
 C:\Users\filmee24\Documents\GitHub\OpenIDE\OpenIDE\OpenIDE.Core.Contracts\obj\Debug\OpenIDE.Core.Contracts.pdb
 C:\Users\filmee24\Documents\GitHub\OpenIDE\OpenIDE\OpenIDE.Core.Contracts\bin\Debug\Telerik.WinControls.UI.dll
 C:\Users\filmee24\Documents\GitHub\OpenIDE\OpenIDE\OpenIDE.Core.Contracts\obj\Debug\OpenIDE.Core.Contracts.dll.licenses
-C:\Users\filmee24\Documents\GitHub\OpenIDE\OpenIDE\OpenIDE.Core.Contracts\obj\Debug\OpenIDE.Core.Contracts.csprojResolveAssemblyReference.cache
 C:\Users\filmee24\Documents\GitHub\OpenIDE\OpenIDE\OpenIDE.Core.Contracts\bin\Debug\Telerik.WinControls.dll
 C:\Users\filmee24\Documents\GitHub\OpenIDE\OpenIDE\OpenIDE.Core.Contracts\bin\Debug\Telerik.WinControls.Themes.VisualStudio2012Dark.dll
 C:\Users\filmee24\Documents\GitHub\OpenIDE\OpenIDE\OpenIDE.Core.Contracts\bin\Debug\TelerikCommon.dll
+C:\Users\filmee24\Documents\GitHub\OpenIDE\OpenIDE\OpenIDE.Core.Contracts\bin\Debug\DigitalRune.Windows.TextEditor.dll
+C:\Users\filmee24\Documents\GitHub\OpenIDE\OpenIDE\OpenIDE.Core.Contracts\bin\Debug\Ionic.Zip.dll
+C:\Users\filmee24\Documents\GitHub\OpenIDE\OpenIDE\OpenIDE.Core.Contracts\bin\Debug\pplStuff.Controls.ToolBox.dll
+C:\Users\filmee24\Documents\GitHub\OpenIDE\OpenIDE\OpenIDE.Core.Contracts\bin\Debug\System.Scripting.dll
+C:\Users\filmee24\Documents\GitHub\OpenIDE\OpenIDE\OpenIDE.Core.Contracts\bin\Debug\Telerik.WinControls.RadDock.dll
+C:\Users\filmee24\Documents\GitHub\OpenIDE\OpenIDE\OpenIDE.Core.Contracts\bin\Debug\updateSystemDotNet.Controller.dll

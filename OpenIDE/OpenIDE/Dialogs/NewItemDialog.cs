@@ -55,12 +55,13 @@ namespace OpenIDE.Core.Dialogs
 
         private void radListView1_SelectedItemChanged(object sender, EventArgs e)
         {
-           var s = radListView1.SelectedItem.Tag as ItemTemplate;
+           var s = radListView1.SelectedItem?.Tag as ItemTemplate;
 
             if (s != null)
             {
                 Type = s.ID;
                 Template = s;
+
                 if(!Filename.EndsWith(s.Extension))
                 {
                     Filename += s.Extension;

@@ -2,4 +2,3 @@ C:\Users\filmee24\Documents\GitHub\OpenIDE\OpenIDE\OpenIDE.Library\bin\Debug\Ope
 C:\Users\filmee24\Documents\GitHub\OpenIDE\OpenIDE\OpenIDE.Library\bin\Debug\OpenIDE.Library.pdb
 C:\Users\filmee24\Documents\GitHub\OpenIDE\OpenIDE\OpenIDE.Library\obj\Debug\OpenIDE.Library.dll
 C:\Users\filmee24\Documents\GitHub\OpenIDE\OpenIDE\OpenIDE.Library\obj\Debug\OpenIDE.Library.pdb
-C:\Users\filmee24\Documents\GitHub\OpenIDE\OpenIDE\OpenIDE.Library\obj\Debug\OpenIDE.Library.csprojResolveAssemblyReference.cache

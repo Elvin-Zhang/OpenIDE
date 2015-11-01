@@ -30,7 +30,7 @@ namespace OpenIDE.Core
             {
                 foreach (var l in _listeners[name])
                 {
-                    l(args);
+                    Utils.DynamicInvoke(l, args);
                 }
             }
         }

@@ -100,8 +100,12 @@ namespace OpenIDE.Core.Extensibility
             _engine.Add("register_window", new Action<string, Window>((n, w)=> Windows.Add(n, w)));
             _engine.Add("notify", new Action<string, string>((title, content) => 
                                     NotificationService.Notify(title, content)));
+            _engine.Add("prompt", new Func<string, string, string>((_, __) =>
+            {
+                return Prompt.Show(_, __);
+            }));
             _engine.Add("debug", Workspace.Output);
-
+            
             _engine.Add("plugin", this);
 
             Events.Fire("OnReady");

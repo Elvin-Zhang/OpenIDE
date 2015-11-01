@@ -12,10 +12,11 @@ namespace OpenIDE.Core
     {
         public static Dictionary<Guid, Image> Icons = new Dictionary<Guid, Image>();
 
-        public static RadTreeNode Build(Project proj)
+        public static RadTreeNode Build(Project proj, RadContextMenu radContextMenu1)
         {
             var pn = new RadTreeNode($"Project '{proj.Name}'", true);
             pn.Tag = proj;
+            pn.ContextMenu = radContextMenu1;
 
             var props = new RadTreeNode("Properties", Resources.Property, true);
             props.Tag = new PropertiesView();
@@ -33,14 +34,14 @@ namespace OpenIDE.Core
             return pn;
         }
 
-        public static RadTreeNode Build(Solution sol)
+        public static RadTreeNode Build(Solution sol, RadContextMenu radContextMenu1)
         {
             var ret = new RadTreeNode($"Solution '{sol.Name}'", true);
             ret.Tag = sol;
 
             foreach (var p in sol.Projects)
             {
-                var pn = Build(p);
+                var pn = Build(p, radContextMenu1);
 
                 ret.Nodes.Add(pn);
             }
@@ -57,5 +58,6 @@ namespace OpenIDE.Core
 
             return n;
         }
+
     }
 }

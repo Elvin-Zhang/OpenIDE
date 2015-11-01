@@ -62,7 +62,7 @@ namespace OpenIDE
                         newFileMenuItem.Enabled = true;
 
                         explorerTreeView.Nodes.Clear();
-                        explorerTreeView.Nodes.Add(SolutionExplorer.Build(Workspace.Solution));
+                        explorerTreeView.Nodes.Add(SolutionExplorer.Build(Workspace.Solution, radContextMenu1));
 
                         break;
                     case "proj":
@@ -110,6 +110,8 @@ namespace OpenIDE
             }
 
             RefreshLanguage();
+
+            addItemContextItem.Click += radMenuItem13_Click;
         }
 
         private void RefreshLanguage()
@@ -149,7 +151,7 @@ namespace OpenIDE
                 Workspace.Solution.Name = name;
 
                 explorerTreeView.Nodes.Clear();
-                explorerTreeView.Nodes.Add(SolutionExplorer.Build(Workspace.Solution));
+                explorerTreeView.Nodes.Add(SolutionExplorer.Build(Workspace.Solution, radContextMenu1));
 
                 Directory.CreateDirectory(folderBrowserDialog1.SelectedPath + "\\" + name);
 
@@ -176,7 +178,7 @@ namespace OpenIDE
                 Workspace.Solution.Projects.Add(f);
 
                 explorerTreeView.Nodes.Clear();
-                explorerTreeView.Nodes.Add(SolutionExplorer.Build(Workspace.Solution));
+                explorerTreeView.Nodes.Add(SolutionExplorer.Build(Workspace.Solution, radContextMenu1));
 
                 np.Plugin.Events.Fire("OnCreateProject", f);
 
@@ -200,7 +202,7 @@ namespace OpenIDE
                 newFileMenuItem.Enabled = true;
 
                 explorerTreeView.Nodes.Clear();
-                explorerTreeView.Nodes.Add(SolutionExplorer.Build(Workspace.Solution));
+                explorerTreeView.Nodes.Add(SolutionExplorer.Build(Workspace.Solution, radContextMenu1));
             }
         }
 
@@ -222,7 +224,7 @@ namespace OpenIDE
                 Workspace.SelectedProject.Files.Add(f);
 
                 explorerTreeView.Nodes.Clear();
-                explorerTreeView.Nodes.Add(SolutionExplorer.Build(Workspace.Solution));
+                explorerTreeView.Nodes.Add(SolutionExplorer.Build(Workspace.Solution, radContextMenu1));
 
                 Workspace.Solution.Save(Workspace.SolutionPath);
                 var fi = new FileInfo(Workspace.SolutionPath).Directory.FullName + "\\" + f.Name;

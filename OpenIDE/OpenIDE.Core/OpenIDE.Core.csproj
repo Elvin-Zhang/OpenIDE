@@ -32,24 +32,28 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DigitalRune.Windows.TextEditor">
-      <HintPath>..\..\..\..\..\Downloads\DigitalRune-TextEditor-1.3.1\DigitalRune-TextEditor-1.3.1\DigitalRune.Windows.TextEditor\bin\Debug\DigitalRune.Windows.TextEditor.dll</HintPath>
+    <Reference Include="DigitalRune.Windows.TextEditor, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dependencies\DigitalRune.Windows.TextEditor.dll</HintPath>
     </Reference>
     <Reference Include="Ionic.Zip, Version=1.9.6.0, Culture=neutral, PublicKeyToken=6583c7c814667745, processorArchitecture=MSIL">
-      <HintPath>..\packages\DotNetZip.1.9.6\lib\net20\Ionic.Zip.dll</HintPath>
-      <Private>True</Private>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dependencies\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="pplStuff.Controls.ToolBox">
+      <HintPath>..\Dependencies\pplStuff.Controls.ToolBox.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
-    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Management" />
     <Reference Include="System.Numerics" />
-    <Reference Include="System.Scripting">
-      <HintPath>..\..\..\eStd\eStd\eStd\Build\System.Scripting.dll</HintPath>
+    <Reference Include="System.Scripting, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c86a0aebc53f7c00, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dependencies\System.Scripting.dll</HintPath>
     </Reference>
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xaml" />
@@ -60,28 +64,27 @@
     <Reference Include="System.Xml" />
     <Reference Include="Telerik.WinControls, Version=2015.1.225.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\OpenIDE\bin\Debug\Telerik.WinControls.dll</HintPath>
+      <HintPath>..\Dependencies\Telerik.WinControls.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.WinControls.ChartView, Version=2015.1.225.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
     <Reference Include="Telerik.WinControls.RadDock, Version=2015.1.225.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\OpenIDE\bin\Debug\Telerik.WinControls.RadDock.dll</HintPath>
+      <HintPath>..\Dependencies\Telerik.WinControls.RadDock.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.WinControls.Themes.VisualStudio2012Dark, Version=2015.1.225.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\OpenIDE\bin\Debug\Telerik.WinControls.Themes.VisualStudio2012Dark.dll</HintPath>
+      <HintPath>..\Dependencies\Telerik.WinControls.Themes.VisualStudio2012Dark.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.WinControls.UI, Version=2015.1.225.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\OpenIDE\bin\Debug\Telerik.WinControls.UI.dll</HintPath>
+      <HintPath>..\Dependencies\Telerik.WinControls.UI.dll</HintPath>
     </Reference>
     <Reference Include="TelerikCommon, Version=2015.1.225.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\OpenIDE\bin\Debug\TelerikCommon.dll</HintPath>
+      <HintPath>..\Dependencies\TelerikCommon.dll</HintPath>
     </Reference>
     <Reference Include="UIAutomationProvider" />
     <Reference Include="updateSystemDotNet.Controller">
-      <HintPath>..\..\..\..\..\..\..\Program Files\updateSystem.NET\Deploy\updateSystemDotNet.Controller.dll</HintPath>
+      <HintPath>..\Dependencies\updateSystemDotNet.Controller.dll</HintPath>
     </Reference>
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
